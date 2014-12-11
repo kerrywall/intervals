@@ -137,6 +137,12 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter; }
 
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
@@ -207,5 +213,8 @@ input[type=radio]:active {
     padding: 20px; } }
 @media only screen and (max-width: 545px) {
   input[type=radio] {
-    display: block;
-    margin: 10px 0; } }
+    display: inline;
+    margin: 0; }
+
+  .quality {
+    display: block; } }
