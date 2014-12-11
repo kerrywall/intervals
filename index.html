@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>INTERVALFEST</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<h1>&#9835; intervals!</h1>
+		<h3>a music theory quiz courtesy of teoria.js</h3>
+		<h5>(because sometimes you want to study for your theory exam and code at the same time.)</h5>
+	</header>
+	<div class="main">
+		<h4>this is how we roll.</h4>
+		<p class="intro">The quiz will randomly select two notes (naturals, sharps and flats &#8212; double sharps and double flats may appear in the second note, but not in the first. It screws things up). Your task, should you choose to accept it, is to determine the interval between the two notes.</p>
+		<p>You'll select the <em>quality</em> of the interval using the radio buttons and enter the <em>distance</em> in numeral form (i.e. 2, 7, not second or seventh) in the text box. Once you submit, the script tells you how you did and a new interval is generated. It'll keep going until you get bored.</p>
+		<h4>These are the abbreviations.</h4>
+		<p>These are text approximations of musical symbols:</p>
+		<ul>
+			<li>x = double sharp</li>
+			<li>bb = double flat</li>
+		</ul>
+		<p>You'll see these when you get your results. They don't use the traditional notations (+, -, &times;,  &deg;) because those aren't how they're referenced in teoria.js.</p>
+		<ul>
+			<li>M = major</li>
+			<li>m = minor</li>
+			<li>P = perfect</li>
+			<li>A = augmented</li>
+			<li>d = diminished</li>
+		</ul>
+		<h4>this is the interval.</h4>
+		<p class="interval"></p>
+		<h4>this is where you answer.</h4>
+		<form action="" id="answer">
+			<div class="buttons">
+				Quality: <input type="radio" name="quality" class="quality" id="major "value="M"> <label for="major">major</label>
+				<input type="radio" name="quality" class="quality" id="minor "value="m"> <label for="minor">minor</label>
+				<input type="radio" name="quality" class="quality" id="perfect "value="P"> <label for="perfect">perfect</label>
+				<input type="radio" name="quality" class="quality" id="augmented" value="A"> <label for="augmented">augmented</label>
+				<input type="radio" name="quality" class="quality" id="diminished" value="d"> <label for="diminished">diminished</label>
+			</div>
+			Distance: <input type="text" class="distance">
+			<input type="submit" value="Go! &#9834;">
+		</form>
+		<h4>this is how you did.</h4>
+		<p class="response"></p>
+		<p class="answer">You haven't submitted an answer yet.</p>
+
+	</div>
+	<!-- /.main -->
+	<footer>
+		<p>Coded with love by <a href="http://kerrywall.com" target="_blank">Kerry</a> using the <a href="https://github.com/saebekassebil/teoria" target="_blank">teoria.js library</a>.</p>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</footer>
+	
+	<script src="js/vendor/teoria.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>
