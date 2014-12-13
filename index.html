@@ -34,7 +34,8 @@
 	<div class="main">
 		<h4>this is how we roll.</h4>
 		<p class="intro">The quiz will randomly select two notes (naturals, sharps and flats &#8212; double sharps and double flats may appear in the second note, but not in the first. It screws things up). Your task, should you choose to accept it, is to determine the interval between the two notes.</p>
-		<p>You'll select the <em>quality</em> of the interval using the radio buttons and enter the <em>distance</em> in numeral form (i.e. 2, 7, not second or seventh) in the text box. Once you submit, the script tells you how you did and a new interval is generated. It'll keep going until you get bored.</p>
+		<p>You'll select the <em>quality</em> of the interval using the radio buttons and enter the <em>distance</em> in numeral form (i.e. "2" or "7", not "second" or "seventh") in the text box. Once you submit, the script tells you how you did and a new interval is generated. It'll keep going until you get bored.</p>
+		<p>The first note is the bottom note! You'll be identifying rising intervals.</p>
 		<h4>These are the abbreviations.</h4>
 		<p>These are text approximations of musical symbols:</p>
 		<ul>
@@ -42,6 +43,7 @@
 			<li>bb = double flat</li>
 		</ul>
 		<p>You'll see these when you get your results. They don't use the traditional notations (+, -, &times;,  &deg;) because those aren't how they're referenced in teoria.js.</p>
+		<p>You may occasionally get a note with a quality of "undefined." This is caused by teoria.js trying to render a triple sharp or a triple flat, which don't actually exist in the library (but do in music theory). I'm working on a way to avoid this. In the meantime, just refresh to get a new interval.</p>
 		<ul>
 			<li>M = major</li>
 			<li>m = minor</li>
