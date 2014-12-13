@@ -1,11 +1,17 @@
 var intervalApp = {};
 
 intervalApp.notes = ["A","B","C","D","E","F","G","A#","B#","C#","D#","E#","F#","G#","Ab","Bb","Cb","Db","Eb","Fb","Gb"];
-intervalApp.intervals = ["P1", "m2", "M2", "m3", "M3", "P4", "A4", "d5", "P5", "A5", "m6", "M6", "m7", "M7"];
+intervalApp.intervals = ["m2", "M2", "m3", "M3", "P4", "A4", "d5", "P5", "A5", "m6", "M6", "m7", "M7"];
 
 intervalApp.randomize = function() {
 	randomNote = intervalApp.notes[Math.floor(Math.random()*intervalApp.notes.length)];
 	randomInterval = intervalApp.intervals[Math.floor(Math.random()*intervalApp.intervals.length)];
+
+	if (randomNote == "Fb" && randomInterval == "d4") {
+		intervalApp.randomize();
+	} else if (randomNote == "B#" && randomInterval == "A5") {
+		intervalApp.randomize();
+	}
 }
 
 intervalApp.init = function() {
